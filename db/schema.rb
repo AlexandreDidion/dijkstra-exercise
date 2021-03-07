@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_155902) do
+ActiveRecord::Schema.define(version: 2021_03_03_155520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,15 +21,6 @@ ActiveRecord::Schema.define(version: 2021_03_03_155902) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["country_id"], name: "index_cities_on_country_id"
-  end
-
-  create_table "connections", force: :cascade do |t|
-    t.bigint "city_id", null: false
-    t.bigint "road_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["city_id"], name: "index_connections_on_city_id"
-    t.index ["road_id"], name: "index_connections_on_road_id"
   end
 
   create_table "countries", force: :cascade do |t|
@@ -47,6 +38,4 @@ ActiveRecord::Schema.define(version: 2021_03_03_155902) do
   end
 
   add_foreign_key "cities", "countries"
-  add_foreign_key "connections", "cities"
-  add_foreign_key "connections", "roads"
 end
