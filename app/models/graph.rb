@@ -35,7 +35,7 @@ class Graph
           path.push(smallest)
           smallest = previous[smallest]
         end
-        return path
+        return path, distances
       end
 
       if distances[smallest] == maxint || smallest.nil? # All remaining vertices are inaccessible from source
