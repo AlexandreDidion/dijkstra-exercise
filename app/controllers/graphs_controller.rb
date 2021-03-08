@@ -16,7 +16,8 @@ class GraphsController < ApplicationController
     city_connections.each do |city_connection|
       belgium_mapping.add_vertex(city_connection[0], city_connection[1])
     end
-    @path = belgium_mapping.shortest_path(params[:city_start], params[:city_end])
-    @path.push(params[:city_start]).reverse!
+    rough_path, rough_distance = belgium_mapping.shortest_path(params[:city_start], params[:city_end])
+    @path = rough_path.push(params[:city_start]).reverse
+    @distance = rough_distance.fetch(params[:city_end])
   end
 end
