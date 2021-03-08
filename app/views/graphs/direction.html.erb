@@ -1,0 +1,11 @@
+<div class="container">
+
+  <%= form_with url: "/shortest_path", method: :get, local:true do |form| %>
+    <%= form.select :city_start, City.all.map(&:name), include_blank: true %>
+    <%= form.select :city_end, City.all.map(&:name), include_blank: true %>
+    <%= form.submit "Confirm" %>
+  <% end %>
+
+
+
+</div>
