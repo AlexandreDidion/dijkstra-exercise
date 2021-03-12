@@ -205,6 +205,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-19
+  x86_64-darwin-20
 
 DEPENDENCIES
   PriorityQueue (~> 0.1.2)
@@ -233,4 +234,4 @@ RUBY VERSION
    ruby 2.6.6p146
 
 BUNDLED WITH
-   2.2.7
+   2.2.13
