@@ -1,7 +1,5 @@
 class DijkstrasController < ApplicationController
-  def direction; end
-
-  def shortest_path
+  def show
     belgium_mapping = DijkstraService.new_graph
     rough_path, rough_distance = DijkstraService.path_distance(params[:city_start], params[:city_end], belgium_mapping)
     @path = rough_path.push(params[:city_start]).reverse
