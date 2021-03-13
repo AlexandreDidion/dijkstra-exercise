@@ -1,0 +1,14 @@
+<div class="container">
+
+  <%= form_with url: dijkstra_path, method: :get, local:true do |form| %>
+    <%= form.label :city_start, "From:" %>
+    <%= form.select :city_start, @cities.map(&:name), include_blank: true %>
+    <%= form.label :city_end, "To:" %>
+    <%= form.select :city_end, @cities.map(&:name), include_blank: true %>
+    <%= form.submit "Confirm" %>
+  <% end %>
+
+
+
+</div>
+

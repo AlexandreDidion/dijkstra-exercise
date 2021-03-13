@@ -1,9 +1,8 @@
 <div class="container">
 
-  <%= form_with url: "/direction", method: :get, local:true do |form| %>
+  <%= form_with url: cities_path, method: :get, local:true do |form| %>
     <%= form.select :country, Country.all.map(&:name), include_blank: true %>
     <%= form.submit "Confirm" %>
   <% end %>
 
 </div>
-
