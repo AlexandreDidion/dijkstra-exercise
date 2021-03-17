@@ -15,7 +15,7 @@ class Api::V1::DijkstrasController < Api::V1::BaseController
   private
 
   def set_city
-    @city_start = City.find_by(name: params[:city_start])
-    @city_end = City.find_by(name: params[:city_end])
+    @city_start = City.find(params[:city_start_id])
+    @city_end = City.find(params[:city_end_id])
   end
 end
