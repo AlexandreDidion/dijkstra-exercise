@@ -4,4 +4,14 @@ Rails.application.routes.draw do
   resources :countries, only: [:index]
   resources :cities, only: [:index]
   resource :dijkstra, only: [:show]
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :countries, only: [:index] do
+        resources :cities, only: [:index]
+      end
+      resources :cities, only: [:index]
+      resources :dijkstras, only: [:create]
+    end
+  end
 end
