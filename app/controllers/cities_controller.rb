@@ -1,5 +1,5 @@
 class CitiesController < ApplicationController
   def index
-    @cities = City.all
+    @cities = City.where('country_id = ?', params[:country_id])
   end
 end
