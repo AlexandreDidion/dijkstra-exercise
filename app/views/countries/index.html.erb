@@ -1,7 +1,7 @@
 <div class="container">
 
   <%= form_with url: cities_path, method: :get, local:true do |form| %>
-    <%= select :country, @countries, @countries.map { |country| country.id },  include_blank: true %>
+    <%= select :country, @countries, @countries.map { |country| country.name },  include_blank: true %>
     <%= form.submit "Confirm" %>
   <% end %>
 
