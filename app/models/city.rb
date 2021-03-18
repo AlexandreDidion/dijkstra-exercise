@@ -11,4 +11,10 @@ class City < ApplicationRecord
   def connected_cities
     City.where(id: roads.pluck(:city_start_id, :city_end_id).flatten.uniq - [id])
   end
+
+  def connected_roads
+    roads.each_with_object([]) do |road, object|
+      object << [self == road.city_start ? road.city_end.name : road.city_start.name, road.distance]
+    end
+  end
 end
