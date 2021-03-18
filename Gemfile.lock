@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    PriorityQueue (0.1.2)
     actioncable (6.0.3.5)
       actionpack (= 6.0.3.5)
       nio4r (~> 2.0)
@@ -211,7 +210,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  PriorityQueue (~> 0.1.2)
   autoprefixer-rails
   bootsnap (>= 1.4.2)
   byebug
