@@ -1,4 +1,4 @@
-Rails.application.config.hosts << "*"
+Rails.application.config.hosts << "dijkstralex.herokuapp.com"
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
