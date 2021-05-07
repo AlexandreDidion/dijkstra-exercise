@@ -1,4 +1,10 @@
 class CountrySerializer
   include JSONAPI::Serializer
-  attributes 
+  
+  set_type :country
+  set_key_transform :dash
+  attributes :name
+
+  has_many :cities
+  has_many :roads
 end
