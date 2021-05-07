@@ -1,4 +1,5 @@
 class RoadSerializer
   include JSONAPI::Serializer
-  attributes 
+  has_many :city_start, serializer: CitySerializer
+  has_many :city_end, serializer: CitySerializer
 end
