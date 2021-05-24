@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :countries, only: [:index, :show] do
-        resources :cities, only: [:index, :show]
+        resources :cities, only: [:index]
       end
-      resources :cities, only: [:index]
+      resources :cities, only: [:index, :show]
       resources :dijkstras, only: [:create]
     end
   end
