@@ -7,7 +7,7 @@ class DijkstraSerializer
   attribute :journey do |city, params|
     params[:path]
   end 
-  attribute :distance_km do |city, params|
+  attribute :distance do |city, params|
     params[:distance]
   end
   attribute :city_start_id do |city, params|
