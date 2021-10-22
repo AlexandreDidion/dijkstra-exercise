@@ -4,6 +4,9 @@ class City < ApplicationRecord
   has_many :ending_roads, class_name: 'Road', foreign_key: 'city_end_id'
   validates :name, presence: true
 
+  geocoded_by :name
+  after_validation :geocode, if: ->(city) { city.latitude.nil? }
+
   def roads
     starting_roads + ending_roads
   end

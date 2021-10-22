@@ -66,9 +66,4 @@ bordeaux_larochelle = Road.create(city_start: bordeaux, city_end: la_rochelle, d
 bordeaux_rennes = Road.create(city_start: bordeaux, city_end: rennes, distance: 373, country: france)
 larochelle_rennes = Road.create(city_start: la_rochelle, city_end: rennes, distance: 221, country: france)
 
-
 puts 'All Done!'
-
-
-
-
