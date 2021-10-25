@@ -23,7 +23,7 @@ class Api::V1::DijkstrasController < Api::V1::BaseController
   def build_journey(path)
     path.each_with_object([]) do |city_name, array|
       city = City.find_by(name: city_name)
-      array << { city_name: city_name, longitude: city.longitude, latitude: city.longitude, id: city.id }
+      array << { city_name: city_name, longitude: city.longitude, latitude: city.latitude, id: city.id }
     end
   end
 
