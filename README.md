@@ -1,24 +1,5 @@
-# README
+# Dijkstra-exercise - Disjktralex Rails API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails API for the [Ember Octane](https://github.com/AlexandreDidion/dijkstra-front) exercise implementing a Dijkstra Algorithm for two countries: Belgium and France. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I did not create the algorithm myslef, I took [this one](http://rosettacode.org/wiki/Dijkstra%27s_algorithm#Ruby) and modify it a bit to fit my needs. 
